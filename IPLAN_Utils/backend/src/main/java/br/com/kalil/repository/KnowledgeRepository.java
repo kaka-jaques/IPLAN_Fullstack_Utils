@@ -1,18 +1,19 @@
 package br.com.kalil.repository;
 
+import java.util.List;
+
 import org.springframework.data.jdbc.repository.query.Query;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
-import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
-import br.com.kalil.objects.Login;
+import br.com.kalil.objects.Knowledge;
 
 @Repository
 @EnableJpaRepositories
-public interface LoginRepository extends JpaRepository<Login, Integer> {
+public interface KnowledgeRepository extends JpaRepository<Knowledge, Integer> {
 
-	@Query("FROM Login WHERE")
-	Login getProtectedLogin();
+	@Query("FROM Knowledge WHERE")
+	List<Knowledge> getAllKnowledges();
 	
 }

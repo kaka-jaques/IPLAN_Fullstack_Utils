@@ -17,6 +17,7 @@ public class Knowledge {
 	private Integer id;
 	private String title;
 	private String solution;
+	private List<CauseItem> cause;
 	private List<TypeItem> type;
 	private String description;
 	
